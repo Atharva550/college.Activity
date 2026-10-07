@@ -1,0 +1,49 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+class Book {
+    string title;
+    float price;
+
+public:
+    Book(string t, float p) {
+        title = t;
+        price = p;
+    }
+
+    Book(const Book& b) {
+        title = b.title;
+        price = b.price;
+    }
+
+    void display() {
+        cout << "Title: " << title << endl;
+        cout << "Price: " << price << endl;
+    }
+
+    ~Book() {
+    }
+};
+
+int main() {
+    string title;
+    float price;
+
+    cout << "Enter book title: ";
+    getline(cin, title);
+
+    cout << "Enter price: ";
+    cin >> price;
+
+    Book b1(title, price);
+    Book b2(b1);
+
+    cout <<" Original book:endl;
+    b1.display();
+
+    cout << " Copied book:endl;
+    b2.display();
+
+    return 0;
+}
