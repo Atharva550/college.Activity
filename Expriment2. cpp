@@ -1,0 +1,45 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+class Student {
+    int roll;
+    string name;
+    float marks;
+
+public:
+    void accept() {
+        cout << "Enter roll number: ";
+        cin >> roll;
+
+        cout << "Enter name: ";
+        getline(cin >> ws, name);
+
+        cout << "Enter marks: ";
+        cin >> marks;
+    }
+
+    void display(float passingMarks) {
+        cout << "Roll number: " << roll << endl;
+        cout << "Name: " << name << endl;
+        cout << "Marks: " << marks << endl;
+
+        if (marks >= passingMarks)
+            cout << "Result: Pass";
+        else
+            cout << "Result: Fail";
+    }
+};
+
+int main() {
+    Student s;
+    float passingMarks;
+
+    s.accept();
+
+    cout << "Enter passing marks: ";
+    cin >> passingMarks;
+
+    s.display(passingMarks);
+    return 0;
+}
