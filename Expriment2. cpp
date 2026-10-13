@@ -10,17 +10,17 @@ class Student {
 public:
     void accept() {
         cout << "Enter roll number: ";
-        cin >> roll;
+        cin >> roll no ;
 
         cout << "Enter name: ";
-        getline(cin >> ws, name);
+        cin >> \ name;
 
         cout << "Enter marks: ";
         cin >> marks;
     }
 
     void display(float passingMarks) {
-        cout << "Roll number: " << roll << endl;
+        cout << "Roll number: " << roll no << endl;
         cout << "Name: " << name << endl;
         cout << "Marks: " << marks << endl;
 
